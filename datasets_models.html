@@ -20,12 +20,17 @@
     a:hover{color:var(--link-hover);}
     p{margin:0 0 18px;}
     h3{font-size:1.3rem;margin:30px 0 10px;font-weight:normal;}
+    h4{font-size:1.1rem;margin:28px 0 8px;font-weight:normal;border-bottom:1px solid var(--rule);padding-bottom:6px;}
     .lead{color:var(--muted);margin-bottom:24px;}
-    .coming{background:#f7f7f5;border:1px solid var(--rule);border-radius:6px;padding:28px 24px;text-align:center;margin-bottom:28px;}
-    .coming .big{font-size:1.15rem;color:#34607f;margin-bottom:6px;}
+    table{border-collapse:collapse;width:100%;margin:14px 0 8px;font-size:0.97rem;}
+    th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;}
+    th{background:#f7f7f5;font-weight:normal;color:var(--muted);}
+    .note{font-size:0.9rem;color:var(--muted);margin-top:6px;}
+    .coming{background:#f7f7f5;border:1px solid var(--rule);border-radius:6px;padding:20px 22px;margin-bottom:28px;}
+    .coming .big{font-size:1.05rem;color:#34607f;margin-bottom:6px;}
     .coming .sub{color:var(--muted);font-size:0.95rem;}
     .profiles{font-size:1rem;margin-top:10px;}
-    .profiles a{display:inline-block;margin:0 12px;}
+    .profiles a{display:inline-block;margin:0 12px 0 0;}
     @media(max-width:560px){nav a{display:inline-block;margin-bottom:6px;}}
   </style>
 </head>
@@ -43,14 +48,50 @@
     <h3>Datasets and Machine Learning Models</h3>
     <p class="lead">A selection of open datasets, code, and machine learning models I develop and share.</p>
 
+    <h4>ML Models &mdash; KenyaESG-RoBERTa</h4>
+    <p>Three independent binary sentence classifiers (one per ESG pillar) for Environmental, Social,
+       and Governance communication in corporate reports of firms listed on the Nairobi Securities
+       Exchange (NSE). Fine-tuned <code>roberta-base</code> models, following the sentence-level
+       design of Schimanski et al. (2024). Released under Apache-2.0.</p>
+    <table>
+      <thead>
+        <tr><th>Model</th><th>Pillar</th><th>F1</th><th>DOI</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://huggingface.co/josephagossa/KenyaESG-RoBERTa-env" target="_blank">KenyaESG-RoBERTa-env</a></td>
+          <td>Environmental</td><td>0.917</td>
+          <td><a href="https://doi.org/10.57967/hf/9126" target="_blank">10.57967/hf/9126</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://huggingface.co/josephagossa/KenyaESG-RoBERTa-soc" target="_blank">KenyaESG-RoBERTa-soc</a></td>
+          <td>Social</td><td>0.882</td>
+          <td><a href="https://doi.org/10.57967/hf/9127" target="_blank">10.57967/hf/9127</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://huggingface.co/josephagossa/KenyaESG-RoBERTa-gov" target="_blank">KenyaESG-RoBERTa-gov</a></td>
+          <td>Governance</td><td>0.916</td>
+          <td><a href="https://doi.org/10.57967/hf/9128" target="_blank">10.57967/hf/9128</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">F1 against a held-out, two-annotator human benchmark (100 sentences per pillar),
+       independent of the keyword training labels.</p>
+
+    <h4>Dataset &mdash; AfricaESG</h4>
     <div class="coming">
       <div class="big">&#128679; Coming soon</div>
-      <div class="sub">Datasets and models will be published here. In the meantime, you can browse my profiles:</div>
-      <div class="profiles">
-        <a href="https://github.com/josephagossa" target="_blank">GitHub &rarr;</a>
-        <a href="https://huggingface.co/josephagossa" target="_blank">Hugging Face &rarr;</a>
-      </div>
+      <div class="sub">A sentence-level ESG classification dataset (Environmental, Social, Governance)
+         built from African corporate reports, with a held-out human evaluation set. Company and
+         personal names are masked. To be released under Apache-2.0 with DOI
+         <a href="https://doi.org/10.5281/zenodo.20608237" target="_blank">10.5281/zenodo.20608237</a>.</div>
     </div>
+
+    <p>You can also browse my profiles:</p>
+    <p class="profiles">
+      <a href="https://github.com/josephagossa" target="_blank">GitHub &rarr;</a>
+      <a href="https://huggingface.co/josephagossa" target="_blank">Hugging Face &rarr;</a>
+    </p>
   </div>
 </body>
 </html>
