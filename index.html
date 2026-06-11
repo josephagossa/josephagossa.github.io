@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Joseph Agossa">
+  <meta name="description" content="Personal website of Joseph Agossa, Research Engineer at ESSEC Business School">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Agossa &ndash;</title>
+  <style>
+    :root{--text:#222;--muted:#555;--link:#1a5276;--link-hover:#c0392b;--rule:#e2e2e2;--bg:#ffffff;}
+    *{box-sizing:border-box;}
+    body{font-family:Georgia,'Times New Roman',serif;color:var(--text);background:var(--bg);line-height:1.65;margin:0;padding:0 20px;}
+    .wrap{max-width:820px;margin:0 auto;padding:40px 0 80px;}
+    h1{font-size:2rem;margin:0 0 6px;font-weight:normal;}
+    h1 a{color:var(--text);text-decoration:none;}
+    nav{margin:10px 0 28px;padding-bottom:14px;border-bottom:1px solid var(--rule);font-size:0.98rem;}
+    nav a{color:var(--link);text-decoration:none;margin-right:18px;white-space:nowrap;}
+    nav a:hover{color:var(--link-hover);text-decoration:underline;}
+    .profile-img{float:right;width:200px;max-width:40%;margin:0 0 18px 24px;border-radius:4px;}
+    a{color:var(--link);}
+    a:hover{color:var(--link-hover);}
+    p{margin:0 0 18px;}
+    .disclaimer{font-size:0.85rem;color:var(--muted);font-style:italic;margin-top:40px;}
+    .social{margin-top:30px;padding-top:18px;border-top:1px solid var(--rule);font-size:0.95rem;}
+    .social a{margin-right:16px;}
+    .note{background:#eef5fb;border:1px dashed #9cc2e0;padding:10px 14px;font-size:0.85rem;color:#34607f;border-radius:3px;margin-bottom:24px;}
+    @media(max-width:560px){
+      .profile-img{float:none;display:block;margin:0 auto 20px;width:160px;max-width:60%;}
+      nav a{display:inline-block;margin-bottom:6px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><a href="index.html">Joseph Agossa</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="research_papers.html">Research</a>
+      <a href="datasets_models.html">Datasets and ML Models</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+
+    <img class="profile-img" src="images/joseph.jpg" alt="Joseph Agossa">
+
+    <p>Welcome to my website!</p>
+
+    <p>I am a Research Engineer at <a href="https://www.essec.edu/" target="_blank">ESSEC Business School</a>, within the Research Center. I also serve as an <strong>AI Ambassador</strong>.</p>
+
+    <p>My research interests include Econometrics, Big Data, Machine Learning / Text as Data (NLP), Large Language Models (LLMs), Generative AI, ESG disclosure, and corporate governance. I also contribute statistical methodology to interdisciplinary work in health sciences. See my <a href="research_papers.html">Research</a> page for publications and my <a href="teaching.html">Teaching</a> page for courses.</p>
+
+    <p class="disclaimer">Disclaimer: This is my personal website. The views expressed here do not necessarily represent the views of ESSEC Business School.</p>
+
+    <div class="social">
+      <a href="https://scholar.google.com/citations?user=6aBO1VMAAAAJ&hl=fr" target="_blank">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/joseph-agossa-577ba3204/" target="_blank">LinkedIn</a>
+      <a href="mailto:joseph.agossa@essec.edu">Email</a>
+    </div>
+  </div>
+</body>
+</html>
