@@ -78,14 +78,25 @@
     <p class="note">F1 against a held-out, two-annotator human benchmark (100 sentences per pillar),
        independent of the keyword training labels.</p>
 
-    <h4>Dataset &mdash; AfricaESG</h4>
-    <div class="coming">
-      <div class="big">&#128679; Coming soon</div>
-      <div class="sub">A sentence-level ESG classification dataset (Environmental, Social, Governance)
-         built from African corporate reports, with a held-out human evaluation set. Company and
-         personal names are masked. To be released under Apache-2.0 with DOI
-         <a href="https://doi.org/10.5281/zenodo.20608237" target="_blank">10.5281/zenodo.20608237</a>.</div>
-    </div>
+    <h4>Dataset &mdash; KenyaESG</h4>
+    <p><strong>KenyaESG: A Sentence-level ESG Disclosure Classification Dataset for Nairobi
+       Securities Exchange Corporate Reports.</strong></p>
+    <p>A sentence-level dataset for three independent binary ESG classification tasks (Environmental,
+       Social, Governance), built from the annual, integrated, and sustainability reports of firms
+       listed on the Nairobi Securities Exchange (NSE), 2010&ndash;2024, combined with reference
+       sentences from Schimanski et al. (2024). For each pillar it provides a fine-tuning set of
+       3,900 sentences and a disjoint held-out human evaluation set of 100 sentences with two
+       independent annotators' judgments (Cohen's &kappa;: 0.94 E, 0.86 S, 0.88 G). Training labels
+       for the Kenya-sourced sentences were assigned by a keyword filter refined by a single-reviewer
+       pass; the human-annotated evaluation sets are the appropriate performance benchmark. The
+       dataset captures disclosure intensity rather than quality. Company and personal names are
+       masked (<code>[COMPANY]</code>, <code>[PERSON]</code>); masking is semi-automatic and not
+       guaranteed exhaustive, and the data must not be used to re-identify individuals or firms.
+       Companion data to the <a href="https://huggingface.co/josephagossa/KenyaESG-RoBERTa-env" target="_blank">KenyaESG-RoBERTa</a>
+       classifiers. Licensed under Apache-2.0.</p>
+    <p class="note">DOI: <a href="https://doi.org/10.5281/zenodo.20608237" target="_blank">10.5281/zenodo.20608237</a>
+       &nbsp;&middot;&nbsp; Files: three training sets, three evaluation sets, the dataset card, and
+       an anonymization log.</p>
 
     <p>You can also browse my profiles:</p>
     <p class="profiles">
